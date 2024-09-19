@@ -11,3 +11,4 @@ let square = function(num){
     console.log(result)
 }
 square('suman')
+console.log('Suman')
