@@ -29,3 +29,30 @@ let tipCalculator = function(subtotal, tipPercentage){
 }
 let amount = tipCalculator(100, .2);
 console.log(amount);
+
+// grade calculator
+// >= 90 grgade A
+// >=80<90 grade B
+// >=70 <80 grade C
+// else pass
+
+let gradeCalculator = function(a,b,c){
+    let totalScore  = 300;
+    let scoreObtained = a+b+c;
+    let scorePer = (scoreObtained/totalScore)*100;
+    let lettergrade = '';
+    console.log('Score obtained: ' + scoreObtained + '\nScore Percentage: ' + scorePer)
+    if (scorePer >= 90){
+        lettergrade = 'A';
+    } else if(scorePer>=80){
+        lettergrade = 'B';
+    } else if (scorePer >= 70){
+        lettergrade = 'C';
+    } 
+    else if (scorePer>=50){
+        lettergrade =  'D';
+    }
+    return `you got a ${lettergrade} (${scorePer})%`;
+}
+let grade = gradeCalculator(90, 85, 80);
+console.log(grade);
